@@ -1,6 +1,6 @@
 CC = gcc 
-CCFLAGS=-fopenmp -I${MKLROOT}/include
-LDFLAGS=-L${MKLROOT}/lib/intel64 -Wl,--no-as-needed -lmkl_rt -lpthread -lm -ldl
+CCFLAGS=-fopenmp
+LDFLAGS=-L${MKLROOT}/lib/intel64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_rt -lmkl_core -liomp5 -lpthread -lm -ldl
 
 SOURCES=simple_MKL_DGEMM_test.c low_overhead_timers.c
 
